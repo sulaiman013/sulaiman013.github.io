@@ -90,3 +90,52 @@ body {
 .text-gray-600 {
   color: #4b5563;
 }
+/* Wave animations */
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.absolute.bottom-0 path {
+  animation: wave 15s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+/* Make second wave slower */
+.absolute.bottom-0.translate-y-20 path {
+  animation-duration: 20s;
+  animation-delay: 2s;
+}
+
+/* Profile image hover effect */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Skill tags hover effect */
+.rounded-full, .rounded-lg {
+  transition: all 0.3s ease;
+}
+
+.bg-teal-50.rounded-full:hover,
+.bg-teal-50.rounded-lg:hover {
+  background-color: rgba(0, 184, 169, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Animated skill bars */
+.h-2.bg-teal-500 {
+  transition: width 1.5s ease-out;
+}
