@@ -931,5 +931,58 @@
             });
         });
     </script>
+    <script>
+  // Make sure Tailwind is loaded
+  if (typeof tailwind === 'undefined') {
+    const tailwindScript = document.createElement('script');
+    tailwindScript.src = 'https://cdn.tailwindcss.com';
+    document.head.appendChild(tailwindScript);
+  }
+
+  // Add scroll animations
+  document.addEventListener('DOMContentLoaded', function() {
+    // Fade in elements when they come into view
+    const fadeElements = document.querySelectorAll('section, .bg-white');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.transition = 'opacity 0.6s ease-in-out, transform 0.6s ease-in-out';
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeElements.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      observer.observe(el);
+    });
+    
+    // Animate skill bars
+    const skillBars = document.querySelectorAll('.h-2.bg-teal-500');
+    skillBars.forEach(bar => {
+      const width = bar.style.width;
+      bar.style.width = '0';
+      setTimeout(() => {
+        bar.style.transition = 'width 1s ease-in-out';
+        bar.style.width = width;
+      }, 300);
+    });
+  });
+  
+  // Interactive elements
+  const skillTags = document.querySelectorAll('.cursor-pointer');
+  skillTags.forEach(tag => {
+    tag.addEventListener('mouseover', function() {
+      this.classList.add('bg-teal-100');
+      this.classList.remove('bg-teal-50');
+    });
+    tag.addEventListener('mouseout', function() {
+      this.classList.remove('bg-teal-100');
+      this.classList.add('bg-teal-50');
+    });
+  });
+</script>
 </body>
 </html>
