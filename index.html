@@ -32,19 +32,6 @@
     </script>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-white to-teal-50">
-    <div id="loading" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: white; z-index: 9999; display: flex; justify-content: center; align-items: center;">
-  <div style="width: 40px; height: 40px; border: 4px solid #e2e8f0; border-top-color: #00B8A9; border-radius: 50%; animation: spin 1s linear infinite;"></div>
-</div>
-<style>
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
-</style>
-<script>
-  window.addEventListener('load', function() {
-    document.getElementById('loading').style.display = 'none';
-  });
-</script>
     <!-- Animated Wave Background -->
     <div class="fixed w-full h-full overflow-hidden z-0">
         <svg class="absolute bottom-0 left-0 w-full opacity-20" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
@@ -101,16 +88,12 @@
         <section id="about" class="py-16">
             <div class="flex flex-col md:flex-row items-center gap-8">
                 <div class="md:w-1/2">
-                    <div class="relative w-40 h-40 rounded-full overflow-hidden mx-auto mb-6 border-4 border-teal-400 shadow-xl hover-lift">
-  <img src="https://raw.githubusercontent.com/sulaiman013/sulaiman013.github.io/main/profile.png" alt="Sulaiman Ahmed" class="w-full h-full object-cover">
-  <div class="absolute inset-0 bg-gradient-to-t from-teal-500/30 to-transparent"></div>
-</div>
                     <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Sulaiman Ahmed</h1>
                     <h2 class="text-2xl md:text-3xl font-semibold text-teal-600 mb-6">Data Analytics Engineer</h2>
                     <p class="text-lg text-gray-600 mb-6">4x Microsoft Certified Analytics Engineer with <span class="font-semibold">5 years</span> of data analytics experience in academia and industry working on various projects.</p>
                     <div class="flex space-x-4">
                         <a href="#contact" class="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors shadow-md">Get In Touch</a>
-                        <a href="https://github.com/sulaiman013/sulaiman013.github.io/blob/7971a94d3f5aca405b93177ecf802ec5364aae91/sulaiman_ahmed_resume.pdf" class="border border-teal-600 text-teal-600 hover:bg-teal-50 font-semibold py-2 px-6 rounded-lg transition-colors flex items-center gap-2">
+                        <a href="https://github.com/sulaiman013/sulaiman013.github.io/blob/master/sulaiman_ahmed_resume.pdf" class="border border-teal-600 text-teal-600 hover:bg-teal-50 font-semibold py-2 px-6 rounded-lg transition-colors flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                                 <polyline points="14 2 14 8 20 8"></polyline>
@@ -343,8 +326,11 @@
                                 <span class="text-sm text-gray-500">95%</span>
                             </div>
                             <div class="h-2 bg-gray-200 rounded-full">
-                                <div class="h-2 rounded-full bg-teal-500 animate-width" style="width: 0" data-width="95%"></div>
-                        </div>
+                                <div
+                                    class="h-2 rounded-full bg-teal-500"
+                                    style="width: 95%"
+                                ></div>
+                            </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
@@ -904,130 +890,46 @@
     </footer>
 
     <script>
-  // Make sure Tailwind is loaded
-  if (typeof tailwind === 'undefined') {
-    const tailwindScript = document.createElement('script');
-    tailwindScript.src = 'https://cdn.tailwindcss.com';
-    document.head.appendChild(tailwindScript);
-  }
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Simple form handler
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! This is a demo form - in a real implementation, this would send an email.');
+        });
 
-  // Add scroll animations
-  document.addEventListener('DOMContentLoaded', function() {
-    // Fade in elements when they come into view
-    const fadeElements = document.querySelectorAll('section, .bg-white');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.transition = 'opacity 0.6s ease-in-out, transform 0.6s ease-in-out';
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, { threshold: 0.1 });
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-    fadeElements.forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(20px)';
-      observer.observe(el);
-    });
-    
-    // Animate skill bars
-    const skillBars = document.querySelectorAll('.h-2.bg-teal-500');
-    skillBars.forEach(bar => {
-      const width = bar.style.width;
-      bar.style.width = '0';
-      setTimeout(() => {
-        bar.style.transition = 'width 1s ease-in-out';
-        bar.style.width = width;
-      }, 300);
-    });
-  });
-  
-  // Interactive elements
-  const skillTags = document.querySelectorAll('.cursor-pointer');
-  skillTags.forEach(tag => {
-    tag.addEventListener('mouseover', function() {
-      this.classList.add('bg-teal-100');
-      this.classList.remove('bg-teal-50');
-    });
-    tag.addEventListener('mouseout', function() {
-      this.classList.remove('bg-teal-100');
-      this.classList.add('bg-teal-50');
-    });
-  });
-</script>
-    <script>
-  // Animate background waves
-  const waves = document.querySelectorAll('.absolute.bottom-0 path');
-  
-  waves.forEach((wave, index) => {
-    // Create unique animation for each wave
-    const animationDuration = 8 + (index * 4); // seconds
-    const animationDelay = index * 2; // seconds
-    
-    wave.style.animation = `wave ${animationDuration}s ease-in-out ${animationDelay}s infinite alternate`;
-    wave.style.transformOrigin = 'center bottom';
-  });
-
-  // Add wave animation keyframes if not already present
-  if (!document.querySelector('#wave-animation')) {
-    const styleSheet = document.createElement('style');
-    styleSheet.id = 'wave-animation';
-    styleSheet.textContent = `
-      @keyframes wave {
-        0% {
-          transform: translateY(0) scaleY(1);
-        }
-        50% {
-          transform: translateY(-10px) scaleY(1.05);
-        }
-        100% {
-          transform: translateY(0) scaleY(1);
-        }
-      }
-
-      .hover-lift {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-      .hover-lift:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-      }
-    `;
-    document.head.appendChild(styleSheet);
-  }
-
-  // Add main content animations
-  document.addEventListener('DOMContentLoaded', function() {
-    // Fade in elements when they come into view
-    const fadeElements = document.querySelectorAll('section, .bg-white');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.transition = 'opacity 0.6s ease-in-out, transform 0.6s ease-in-out';
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, { threshold: 0.1 });
-
-    fadeElements.forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(20px)';
-      observer.observe(el);
-    });
-    
-    // Animate skill bars
-    const skillBars = document.querySelectorAll('.h-2.bg-teal-500');
-    skillBars.forEach(bar => {
-      const width = bar.style.width;
-      bar.style.width = '0';
-      setTimeout(() => {
-        bar.style.transition = 'width 1s ease-in-out';
-        bar.style.width = width;
-      }, 300);
-    });
-  });
-</script>
+        // Highlight active section in navigation
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if(pageYOffset >= sectionTop - 300) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('border-teal-500');
+                link.classList.add('border-transparent');
+                if(link.getAttribute('href') === `#${current}`) {
+                    link.classList.remove('border-transparent');
+                    link.classList.add('border-teal-500');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
