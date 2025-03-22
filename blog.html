@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sulaiman Ahmed - Blog</title>
+    <meta name="description" content="Data analytics insights, Microsoft Fabric tutorials, and Power BI best practices by Sulaiman Ahmed.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        teal: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Blog specific styles */
+        .blog-content h2 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            font-size: 1.5rem;
+            color: #115e59;
+        }
+        .blog-content h3 {
+            margin-top: 1.25rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: #0d9488;
+        }
+        .blog-content p {
+            margin-bottom: 1.25rem;
+            line-height: 1.7;
+        }
+        .blog-content ul {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+            list-style-type: disc;
+        }
+        .blog-content ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+            list-style-type: decimal;
+        }
+        .blog-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+        }
+        .blog-content blockquote {
+            margin: 1.5rem 0;
+            padding: 1rem 1.5rem;
+            border-left: 4px solid #14b8a6;
+            background-color: #f0fdfa;
+            font-style: italic;
+        }
+        .blog-content img {
+            max-width: 100%;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .blog-content code {
+            font-family: monospace;
+            padding: 0.2rem 0.4rem;
+            background-color: #f1f5f9;
+            border-radius: 0.25rem;
+        }
+        .blog-content pre {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background-color: #1e293b;
+            color: #f8fafc;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+        .blog-content pre code {
+            background-color: transparent;
+            color: inherit;
+            padding: 0;
+        }
+        .blog-content a {
+            color: #0d9488;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
+        }
+        .blog-content a:hover {
+            color: #14b8a6;
+        }
+        .blog-content table {
+            width: 100%;
+            margin: 1.5rem 0;
+            border-collapse: collapse;
+        }
+        .blog-content th,
+        .blog-content td {
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+        }
+        .blog-content th {
+            background-color: #f1f5f9;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-white to-teal-50">
+    <!-- Animated Wave Background -->
+    <div class="fixed w-full h-full overflow-hidden z-0">
+        <svg class="absolute bottom-0 left-0 w-full opacity-20 wave-animation-1" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#00B8A9" fill-opacity="0.6" d="M0,160L48,138.7C96,117,192,75,288,69.3C384,64,480,96,576,128C672,160,768,192,864,176C960,160,1056,96,1152,74.7C1248,53,1344,75,1392,85.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+        <svg class="absolute bottom-0 left-0 w-full opacity-15 wave-animation-2" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#00B8A9" fill-opacity="0.8" d="M0,64L48,96C96,128,192,192,288,186.7C384,181,480,107,576,112C672,117,768,203,864,208C960,213,1056,139,1152,117.3C1248,96,1344,128,1392,144L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+        <svg class="absolute bottom-0 left-0 w-full opacity-10" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#00B8A9" fill-opacity="0.4" d="M0,96L34.3,106.7C68.6,117,137,139,206,133.3C274.3,128,343,96,411,90.7C480,85,549,107,617,133.3C685.7,160,754,192,823,186.7C891.4,181,960,139,1029,122.7C1097.1,107,1166,117,1234,133.3C1302.9,149,1371,171,1406,181.3L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-40 backdrop-blur-md bg-white/70 shadow-sm">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="font-bold text-xl text-teal-600">Sulaiman Ahmed</a>
+                <div class="hidden md:block">
+                    <ul class="flex space-x-6">
+                        <li><a href="index.html#about" class="py-2 border-b-2 border-transparent hover:border-teal-300 transition-colors">About</a></li>
+                        <li><a href="index.html#skills" class="py-2 border-b-2 border-transparent hover:border-teal-300 transition-colors">Skills</a></li>
+                        <li><a href="index.html#experience" class="py-2 border-b-2 border-transparent hover:border-teal-300 transition-colors">Experience</a></li>
+                        <li><a href="index.html#projects" class="py-2 border-b-2 border-transparent hover:border-teal-300 transition-colors">Projects</a></li>
+                        <li><a href="blog.html" class="py-2 border-b-2 border-teal-500 hover:border-teal-300 transition-colors">Blog</a></li>
+                        <li><a href="index.html#certifications" class="py-2 border-b-2 border-transparent hover:border-teal-300 transition-colors">Certifications</a></li>
+                        <li><a href="index.html#education" class="py-2 border-b-2 border-transparent hover:border-teal-300 transition-colors">Education</a></li>
+                    </ul>
+                </div>
+                <div class="flex space-x-3">
+                    <a href="https://linkedin.com/in/sulaimanahmed" target="_blank" rel="noopener noreferrer" class="p-2 rounded-full hover:bg-teal-50 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/sulaiman013" target="_blank" rel="noopener noreferrer" class="p-2 rounded-full hover:bg-teal-50 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="mailto:contact@sulaimanahmed.com" class="p-2 rounded-full hover:bg-teal-50 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 relative z-10">
+        
+        <!-- Blog Header -->
+        <div class="max-w-4xl mx-auto mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-2">Data Analytics Blog</h1>
+            <p class="text-lg text-gray-600">Insights, tips, and tutorials from my data analytics journey</p>
+            <div class="mt-6 border-b border-gray-200"></div>
+        </div>
+        
+        <!-- Featured Blog Post -->
+        <div class="max-w-4xl mx-auto mb-16">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="relative h-64 overflow-hidden bg-gradient-to-r from-teal-500 to-blue-500">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="opacity-25">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
+                        <div class="text-center px-4 py-2 bg-teal-600/70 backdrop-blur-sm rounded-lg mb-4">
+                            <span class="font-medium">Featured Post</span>
+                        </div>
+                        <h2 class="text-3xl font-bold text-center text-white drop-shadow-lg">The Future of Data Architecture: From Power BI to Microsoft Fabric</h2>
+                        <div class="mt-4 text-white/80">
+                            <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm">Microsoft Fabric</span>
+                            <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm ml-2">Power BI</span>
+                            <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm ml-2">Data Architecture</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center">
+                            <span class="text-teal-600 font-bold">SA</span>
+                        </div>
+                        <div class="ml-4">
+                            <div class="font-medium">Sulaiman Ahmed</div>
+                            <div class="text-gray-500 text-sm">March 20, 2025 · 12 min read</div>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-content text-gray-700">
+                        <h2>Why It's Time to Evolve Beyond Traditional Power BI Architecture</h2>
+                        
+                        <p>As a Microsoft-certified data professional who has worked extensively with Power BI over the years, I've witnessed firsthand both its tremendous capabilities and its limitations. While Power BI revolutionized business intelligence with its powerful visualization capabilities and user-friendly interface, organizations are increasingly outgrowing traditional Power BI architectures as they scale their data operations.</p>
+                        
+                        <p>In this blog post, I'll explore why migrating from a traditional Power BI-centered data architecture to Microsoft Fabric is not just beneficial but essential for forward-thinking organizations. Let's dive into the limitations of traditional approaches and how Microsoft Fabric offers a more integrated, scalable, and future-proof solution.</p>
+                        
+                        <h2>The Challenges With Traditional Power BI Architectures</h2>
+                        
+                        <p>Traditional Power BI implementations often encounter the following pain points as organizations scale:</p>
+                        
+                        <h3>1. Data Silos and Fragmentation</h3>
+                        <p>In traditional architectures, data typically resides in various sources—on-premises databases, cloud storage, SaaS applications, and more. Power BI connects to these disparate sources, but this creates multiple data copies, version control issues, and potential for inconsistent insights across departments.</p>
+                        
+                        <h3>2. Performance Bottlenecks</h3>
+                        <p>As data volumes grow, Power BI models can become slow and unwieldy. Even with techniques like incremental refresh and composite models, large organizations often hit performance ceilings that impact user experience and slow down decision-making.</p>
+                        
+                        <h3>3. Complex ETL Processes</h3>
+                        <p>Managing data preparation in Power BI requires a patchwork of tools—Power Query, dataflows, or external ETL processes. This complexity not only requires specialized skills but also introduces more potential failure points in the data pipeline.</p>
+                        
+                        <h3>4. Governance and Security Challenges</h3>
+                        <p>With data spread across multiple platforms and tools, maintaining consistent security policies, access controls, and governance becomes increasingly difficult, potentially exposing organizations to compliance risks.</p>
+                        
+                        <h3>5. Limited Real-time Capabilities</h3>
+                        <p>Traditional Power BI architectures struggle with real-time analytics requirements, often relying on scheduled refreshes rather than continuous data streams.</p>
+                        
+                        <blockquote>
+                            "The organization that can turn data into insights the fastest will win in today's competitive landscape. Traditional architectures that create friction in this process are becoming business liabilities."
+                        </blockquote>
+                        
+                        <h2>Enter Microsoft Fabric: The Future-Proof Data Architecture</h2>
+                        
+                        <p>Microsoft Fabric represents a paradigm shift in how organizations approach their data strategy. Rather than being merely an evolution of Power BI, Fabric is a comprehensive, integrated platform that addresses the fundamental limitations of traditional architectures.</p>
+                        
+                        <h3>1. Unified Data Platform</h3>
+                        <p>Microsoft Fabric unifies various data workloads—data engineering, data integration, data science, real-time analytics, and business intelligence—into a single, cohesive platform. This eliminates the need for disparate tools and creates a seamless experience from data ingestion to visualization.</p>
+                        
+                        <h3>2. OneLake: The Game-Changer</h3>
+                        <p>At the heart of Microsoft Fabric is OneLake, a unified storage layer that serves as a single source of truth for all data assets. OneLake eliminates data silos by allowing different workloads to access the same data without duplication. This dramatically reduces storage costs, simplifies data management, and ensures consistency across analytics workloads.</p>
+                        
+                        <h3>3. Scalable Performance</h3>
+                        <p>Fabric leverages Microsoft's highly scalable cloud infrastructure to deliver exceptional performance even with massive datasets. Direct Lake mode in Power BI, a feature enabled by Fabric, allows reports to query data directly from OneLake without importing it into a traditional model, effectively removing size limitations.</p>
+                        
+                        <h3>4. Real-time Analytics</h3>
+                        <p>Fabric's KQL (Kusto Query Language) Database and Real-time Analytics capabilities enable organizations to analyze streaming data in real-time, a critical capability in today's fast-paced business environment where decisions need to be made in seconds, not days.</p>
+                        
+                        <h3>5. Simplified Data Engineering</h3>
+                        <p>Fabric's Data Engineering experience includes Spark, notebooks, and data pipelines, making it easier to build complex data transformation workflows without jumping between different tools. This acceleration of the data engineering process means insights can be delivered to business users faster.</p>
+                        
+                        <h3>6. Enhanced Governance and Security</h3>
+                        <p>With a unified platform, governance and security policies can be applied consistently across all data and analytics workloads. This simplifies compliance and reduces the risk of data breaches or unauthorized access.</p>
+                        
+                        <h2>Real-World Benefits of Migrating to Microsoft Fabric</h2>
+                        
+                        <p>The advantages of Microsoft Fabric aren't just theoretical. Organizations that have made the transition are seeing tangible benefits:</p>
+                        
+                        <ul>
+                            <li><strong>Reduced Total Cost of Ownership:</strong> By consolidating multiple tools into a single platform, organizations can significantly reduce licensing, infrastructure, and operational costs.</li>
+                            <li><strong>Accelerated Time to Insight:</strong> The streamlined data pipeline in Fabric means that raw data can be transformed into actionable insights more quickly, enabling faster business decisions.</li>
+                            <li><strong>Enhanced Collaboration:</strong> Data engineers, data scientists, and business analysts can now work on the same platform, using the same data, fostering better collaboration and innovation.</li>
+                            <li><strong>Future-Proofing:</strong> As a strategic Microsoft platform, Fabric will continue to evolve with new capabilities, ensuring organizations stay at the cutting edge of data analytics.</li>
+                            <li><strong>Simplified Architecture:</strong> Rather than managing a complex ecosystem of tools, organizations can focus on a single, integrated platform, reducing technical debt and simplification maintenance.</li>
+                        </ul>
+                        
+                        <h2>Migration Strategies: Moving from Power BI to Microsoft Fabric</h2>
+                        
+                        <p>Transitioning to Microsoft Fabric doesn't have to be an all-or-nothing proposition. Here are some practical approaches to consider:</p>
+                        
+                        <h3>Phased Migration</h3>
+                        <p>Start by moving specific workloads or departments to Fabric while maintaining existing Power BI implementations elsewhere. This allows you to validate the benefits and build expertise before a full migration.</p>
+                        
+                        <h3>New Project Approach</h3>
+                        <p>Implement Fabric for new analytics projects while gradually transitioning existing workloads. This minimizes disruption to current operations while still moving toward the target architecture.</p>
+                        
+                        <h3>Strategic Workload Prioritization</h3>
+                        <p>Identify which workloads would benefit most from Fabric's capabilities—perhaps those with performance issues or real-time requirements—and prioritize migrating those first.</p>
+                        
+                        <h3>Hybrid Architecture</h3>
+                        <p>During the transition, maintain a hybrid architecture where some data lives in Fabric while other systems continue to use traditional approaches. Fabric's connectivity options make this a viable interim solution.</p>
+                        
+                        <h2>Conclusion: Embracing the Future of Data Architecture</h2>
+                        
+                        <p>The shift from traditional Power BI architecture to Microsoft Fabric represents more than just a technology upgrade—it's a strategic transformation that aligns with the evolving needs of data-driven organizations. By addressing the fundamental limitations of siloed approaches, Fabric enables organizations to build a more agile, scalable, and unified data ecosystem.</p>
+                        
+                        <p>As a Microsoft-certified professional who has guided organizations through this transition, I can attest that while the journey requires careful planning and execution, the destination is well worth the effort. Microsoft Fabric isn't just the future of Microsoft's data platform; it's the future of enterprise data architecture.</p>
+                        
+                        <p>The organizations that embrace this shift early will gain significant competitive advantages in their ability to derive insights from data faster and more effectively than their peers. In the data-driven economy, that's a difference that will increasingly determine winners and losers.</p>
+                        
+                        <p>Are you ready to reimagine your data architecture for the future? The time to start that journey is now.</p>
+                    </div>
+                    
+                    <div class="mt-8 pt-6 border-t border-gray-200">
+                        <div class="flex space-x-4">
+                            <button class="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full text-gray-600 hover:bg-gray-100 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                                Like (24)
+                            </button>
+                            <button class="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full text-gray-600 hover:bg-gray-100 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                Comment (8)
+                            </button>
+                            <button class="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full text-gray-600 hover:bg-gray-100 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="18" cy="5" r="3"></circle>
+                                    <circle cx="6" cy="12" r="3"></circle>
+                                    <circle cx="18" cy="19" r="3"></circle>
+                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                                </svg>
+                                Share
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- More Blog Posts -->
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">More Articles</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-40 bg-gradient-to-r from-teal-400 to-emerald-500 flex items-center justify-center p-4">
+                        <h3 class="text-xl font-bold text-white text-center">5 Power BI DAX Functions Every Analyst Should Master</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">February 15, 2025 · 8 min read</div>
+                        <p class="text-gray-600 mb-4">Discover the essential DAX functions that will elevate your Power BI reports from good to exceptional, with practical examples and use cases.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-700 font-medium">Read More →</a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-40 bg-gradient-to-r from-blue-400 to-indigo-500 flex items-center justify-center p-4">
+                        <h3 class="text-xl font-bold text-white text-center">Building a Data Lakehouse with Microsoft Fabric</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">January 28, 2025 · 10 min read</div>
+                        <p class="text-gray-600 mb-4">A step-by-step guide to implementing a modern data lakehouse architecture using Microsoft Fabric for improved data management and analytics.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-700 font-medium">Read More →</a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-40 bg-gradient-to-r from-purple-400 to-pink-500 flex items-center justify-center p-4">
+                        <h3 class="text-xl font-bold text-white text-center">Real-time Analytics with KQL in Microsoft Fabric</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">January 10, 2025 · 9 min read</div>
+                        <p class="text-gray-600 mb-4">Learn how to leverage Kusto Query Language (KQL) in Microsoft Fabric to analyze streaming data and implement real-time dashboards for your business.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-700 font-medium">Read More →</a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-40 bg-gradient-to-r from-amber-400 to-orange-500 flex items-center justify-center p-4">
+                        <h3 class="text-xl font-bold text-white text-center">Data Modeling Best Practices for Scale</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">December 18, 2024 · 7 min read</div>
+                        <p class="text-gray-600 mb-4">Expert tips for designing scalable data models that maintain performance even as your data volumes grow, with practical examples using Power BI and SQL.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-700 font-medium">Read More →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- More Posts Button -->
+            <div class="mt-12 text-center">
+                <button class="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors shadow-md">
+                    Load More Articles
+                </button>
+            </div>
+        </div>
+        
+        <!-- Newsletter -->
+        <div class="max-w-4xl mx-auto mt-20 bg-gradient-to-r from-teal-500 to-teal-600 rounded-2xl shadow-lg overflow-hidden">
+            <div class="p-8 md:p-12">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-3/5 mb-6 md:mb-0 md:pr-8">
+                        <h2 class="text-2xl md:text-3xl font-bold text-white mb-3">Subscribe to My Newsletter</h2>
+                        <p class="text-teal-100">Get the latest data analytics insights, Microsoft Fabric tutorials, and Power BI tips delivered straight to your inbox.</p>
+                    </div>
+                    <div class="md:w-2/5">
+                        <form class="space-y-3">
+                            <input type="email" placeholder="Your email address" class="w-full px-4 py-3 rounded-lg focus:ring-2 focus:ring-white focus:ring-opacity-50 focus:outline-none">
+                            <button type="submit" class="w-full bg-white text-teal-600 font-semibold py-3 px-6 rounded-lg hover:bg-teal-50 transition-colors shadow-md">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-teal-800 to-teal-600 text-white py-8 relative z-10 mt-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <div class="font-bold text-xl">Sulaiman Ahmed</div>
+                    <div class="text-teal-200">Data Analytics Engineer</div>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="https://linkedin.com/in/sulaimanahmed" target="_blank" rel="noopener noreferrer" class="hover:text-teal-200 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/sulaiman013" target="_blank" rel="noopener noreferrer" class="hover:text-teal-200 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="mailto:contact@sulaimanahmed.com" class="hover:text-teal-200 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-6 text-center text-teal-200 text-sm">
+                &copy; <span id="current-year"></span> Sulaiman Ahmed. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Add scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fade in elements when they come into view
+            const fadeElements = document.querySelectorAll('.blog-content > *, .rounded-xl');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.transition = 'opacity 0.6s ease-in-out, transform 0.6s ease-in-out';
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            fadeElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
