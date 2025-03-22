@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sulaiman Ahmed - Blog</title>
-    <meta name="description" content="Data analytics insights, Microsoft Fabric tutorials, and Power BI best practices by Sulaiman Ahmed.">
+    <title>Sulaiman Ahmed - Data Analytics Blog</title>
+    <meta name="description" content="Insights on data analytics, SQL projects, and business intelligence from Sulaiman Ahmed, a Microsoft Certified Data Analytics Engineer.">
     <link rel="stylesheet" href="styles.css">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -25,7 +25,26 @@
                             800: '#115e59',
                             900: '#134e4a',
                         },
-                    }
+                    },
+                    typography: {
+                        DEFAULT: {
+                            css: {
+                                color: '#334155',
+                                a: {
+                                    color: '#0d9488',
+                                    '&:hover': {
+                                        color: '#14b8a6',
+                                    },
+                                },
+                                h2: {
+                                    color: '#115e59',
+                                },
+                                h3: {
+                                    color: '#0d9488',
+                                },
+                            },
+                        },
+                    },
                 }
             }
         }
@@ -33,14 +52,14 @@
     <style>
         /* Blog specific styles */
         .blog-content h2 {
-            margin-top: 1.5rem;
+            margin-top: 2rem;
             margin-bottom: 1rem;
-            font-weight: 600;
-            font-size: 1.5rem;
+            font-weight: 700;
+            font-size: 1.75rem;
             color: #115e59;
         }
         .blog-content h3 {
-            margin-top: 1.25rem;
+            margin-top: 1.5rem;
             margin-bottom: 0.75rem;
             font-weight: 600;
             font-size: 1.25rem;
@@ -118,6 +137,34 @@
             background-color: #f1f5f9;
             font-weight: 600;
         }
+        
+        /* Add some animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+        
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+        
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
     </style>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-white to-teal-50">
@@ -178,176 +225,293 @@
     <main class="container mx-auto px-4 py-8 relative z-10">
         
         <!-- Blog Header -->
-        <div class="max-w-4xl mx-auto mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-2">Data Analytics Blog</h1>
-            <p class="text-lg text-gray-600">Insights, tips, and tutorials from my data analytics journey</p>
-            <div class="mt-6 border-b border-gray-200"></div>
-        </div>
-        
-        <!-- Featured Blog Post -->
-        <div class="max-w-4xl mx-auto mb-16">
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div class="relative h-64 overflow-hidden bg-gradient-to-r from-teal-500 to-blue-500">
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="opacity-25">
-                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+        <div class="max-w-4xl mx-auto mb-8 animate-fadeInUp">
+            <a href="blog.html" class="text-teal-600 hover:text-teal-700 flex items-center gap-2 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to all articles
+            </a>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Comprehensive Analysis of Atliq Hardwares: A SQL-Based Ad-Hoc Data Exploration Project</h1>
+            <div class="flex items-center mb-6">
+                <div class="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center">
+                    <span class="text-teal-600 font-bold">SA</span>
+                </div>
+                <div class="ml-4">
+                    <div class="font-medium">Sulaiman Ahmed</div>
+                    <div class="text-gray-500 text-sm">March 23, 2025 · 16 min read</div>
+                </div>
+                <div class="ml-auto flex items-center space-x-3">
+                    <a href="https://github.com/sulaiman013/My-Personal-Projects/tree/master/AD-HOC%20Requests%20%7C%20Consumer%20Goods%20Domain%20%7C%20SQL%20Project" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-700 flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                         </svg>
-                    </div>
-                    <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
-                        <div class="text-center px-4 py-2 bg-teal-600/70 backdrop-blur-sm rounded-lg mb-4">
-                            <span class="font-medium">Featured Post</span>
-                        </div>
-                        <h2 class="text-3xl font-bold text-center text-white drop-shadow-lg">The Future of Data Architecture: From Power BI to Microsoft Fabric</h2>
-                        <div class="mt-4 text-white/80">
-                            <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm">Microsoft Fabric</span>
-                            <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm ml-2">Power BI</span>
-                            <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-sm ml-2">Data Architecture</span>
-                        </div>
+                        GitHub Repository
+                    </a>
+                    <div class="flex items-center gap-1">
+                        <span class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm">SQL</span>
+                        <span class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm">Data Analysis</span>
                     </div>
                 </div>
-                <div class="p-8">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center">
-                            <span class="text-teal-600 font-bold">SA</span>
-                        </div>
-                        <div class="ml-4">
-                            <div class="font-medium">Sulaiman Ahmed</div>
-                            <div class="text-gray-500 text-sm">March 20, 2025 · 12 min read</div>
-                        </div>
+            </div>
+            <div class="border-b border-gray-200 mb-8"></div>
+        </div>
+        
+        <!-- Blog Content -->
+        <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden animate-fadeInUp delay-100">
+            <div class="relative h-64 overflow-hidden bg-gradient-to-r from-teal-500 to-blue-500">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="opacity-25">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                    </svg>
+                </div>
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
+                    <h2 class="text-3xl font-bold text-center text-white drop-shadow-lg">SQL-Based Data Analysis for Business Intelligence</h2>
+                    <div class="mt-4 text-center text-white/90">
+                        Turning raw data into actionable insights through ad-hoc SQL queries
+                    </div>
+                </div>
+            </div>
+            
+            <div class="p-8">
+                <div class="blog-content text-gray-700">
+                    <p>In today's data-driven business landscape, the ability to extract meaningful insights from raw data is invaluable. This project demonstrates how SQL can be leveraged to analyze consumer goods data and provide actionable business intelligence for Atliq Hardwares, a fictional computer hardware manufacturer with global operations.</p>
+                    
+                    <h2>Introduction to Atliq Hardwares and the Project Scope</h2>
+                    
+                    <p>Atliq Hardwares stands as a prominent player in the computer hardware industry, with a significant market presence both in India and international markets. Like many forward-thinking organizations, they recognize the critical importance of data-driven decision making to maintain competitive advantage. This project was designed as part of a hypothetical hiring challenge for junior data analysts, crafted by Tony Sharma, the Director of Data Analytics at Atliq Hardwares.</p>
+                    
+                    <p>The core objective was to tackle various ad-hoc business requests using SQL queries to derive valuable insights from the company's database. The project demonstrates how data analysis can inform strategic business decisions across multiple domains including sales performance, product management, customer relations, and manufacturing costs.</p>
+                    
+                    <h2>Database Structure and Data Overview</h2>
+                    
+                    <p>The Atliq Hardware database comprises six interconnected tables that collectively provide a comprehensive view of the business operations:</p>
+                    
+                    <h3>Customer Dimension (dim_customer)</h3>
+                    <p>This table contains customer information including unique customer codes, names, platforms (e.g., "Brick & Mortar" or "E-Commerce"), distribution channels, geographical market data, and regional classifications.</p>
+                    
+                    <h3>Product Dimension (dim_product)</h3>
+                    <p>This table stores product details with unique product codes and categorizes them by division (like "P & A," "N & S," and "PC"), segment, category, product name, and variant.</p>
+                    
+                    <h3>Gross Price Facts (fact_gross_price)</h3>
+                    <p>Contains product pricing information across different fiscal years (2020 and 2021), linking product codes to their respective gross prices before deductions.</p>
+                    
+                    <h3>Manufacturing Cost Facts (fact_manufacturing_cost)</h3>
+                    <p>Tracks the total production costs for each product, including raw materials, labor, and overhead expenses.</p>
+                    
+                    <h3>Pre-Invoice Deductions Facts (fact_pre_invoice_deductions)</h3>
+                    <p>Documents the percentage of pre-invoice deductions applied to products for different customers and fiscal years.</p>
+                    
+                    <h3>Monthly Sales Facts (fact_sales_monthly)</h3>
+                    <p>Records monthly sales transactions with details on dates, product codes, customer codes, sold quantities, and fiscal years.</p>
+                    
+                    <div class="bg-teal-50 p-6 rounded-xl my-8">
+                        <h3 class="text-teal-800 mt-0">Key Benefit of SQL for Business Analysis</h3>
+                        <p class="mb-0">SQL's ability to join multiple tables and filter complex data allows analysts to answer specific business questions quickly without requiring extensive preprocessing or data transformation steps.</p>
                     </div>
                     
-                    <div class="blog-content text-gray-700">
-                        <h2>Why It's Time to Evolve Beyond Traditional Power BI Architecture</h2>
-                        
-                        <p>As a Microsoft-certified data professional who has worked extensively with Power BI over the years, I've witnessed firsthand both its tremendous capabilities and its limitations. While Power BI revolutionized business intelligence with its powerful visualization capabilities and user-friendly interface, organizations are increasingly outgrowing traditional Power BI architectures as they scale their data operations.</p>
-                        
-                        <p>In this blog post, I'll explore why migrating from a traditional Power BI-centered data architecture to Microsoft Fabric is not just beneficial but essential for forward-thinking organizations. Let's dive into the limitations of traditional approaches and how Microsoft Fabric offers a more integrated, scalable, and future-proof solution.</p>
-                        
-                        <h2>The Challenges With Traditional Power BI Architectures</h2>
-                        
-                        <p>Traditional Power BI implementations often encounter the following pain points as organizations scale:</p>
-                        
-                        <h3>1. Data Silos and Fragmentation</h3>
-                        <p>In traditional architectures, data typically resides in various sources—on-premises databases, cloud storage, SaaS applications, and more. Power BI connects to these disparate sources, but this creates multiple data copies, version control issues, and potential for inconsistent insights across departments.</p>
-                        
-                        <h3>2. Performance Bottlenecks</h3>
-                        <p>As data volumes grow, Power BI models can become slow and unwieldy. Even with techniques like incremental refresh and composite models, large organizations often hit performance ceilings that impact user experience and slow down decision-making.</p>
-                        
-                        <h3>3. Complex ETL Processes</h3>
-                        <p>Managing data preparation in Power BI requires a patchwork of tools—Power Query, dataflows, or external ETL processes. This complexity not only requires specialized skills but also introduces more potential failure points in the data pipeline.</p>
-                        
-                        <h3>4. Governance and Security Challenges</h3>
-                        <p>With data spread across multiple platforms and tools, maintaining consistent security policies, access controls, and governance becomes increasingly difficult, potentially exposing organizations to compliance risks.</p>
-                        
-                        <h3>5. Limited Real-time Capabilities</h3>
-                        <p>Traditional Power BI architectures struggle with real-time analytics requirements, often relying on scheduled refreshes rather than continuous data streams.</p>
-                        
-                        <blockquote>
-                            "The organization that can turn data into insights the fastest will win in today's competitive landscape. Traditional architectures that create friction in this process are becoming business liabilities."
-                        </blockquote>
-                        
-                        <h2>Enter Microsoft Fabric: The Future-Proof Data Architecture</h2>
-                        
-                        <p>Microsoft Fabric represents a paradigm shift in how organizations approach their data strategy. Rather than being merely an evolution of Power BI, Fabric is a comprehensive, integrated platform that addresses the fundamental limitations of traditional architectures.</p>
-                        
-                        <h3>1. Unified Data Platform</h3>
-                        <p>Microsoft Fabric unifies various data workloads—data engineering, data integration, data science, real-time analytics, and business intelligence—into a single, cohesive platform. This eliminates the need for disparate tools and creates a seamless experience from data ingestion to visualization.</p>
-                        
-                        <h3>2. OneLake: The Game-Changer</h3>
-                        <p>At the heart of Microsoft Fabric is OneLake, a unified storage layer that serves as a single source of truth for all data assets. OneLake eliminates data silos by allowing different workloads to access the same data without duplication. This dramatically reduces storage costs, simplifies data management, and ensures consistency across analytics workloads.</p>
-                        
-                        <h3>3. Scalable Performance</h3>
-                        <p>Fabric leverages Microsoft's highly scalable cloud infrastructure to deliver exceptional performance even with massive datasets. Direct Lake mode in Power BI, a feature enabled by Fabric, allows reports to query data directly from OneLake without importing it into a traditional model, effectively removing size limitations.</p>
-                        
-                        <h3>4. Real-time Analytics</h3>
-                        <p>Fabric's KQL (Kusto Query Language) Database and Real-time Analytics capabilities enable organizations to analyze streaming data in real-time, a critical capability in today's fast-paced business environment where decisions need to be made in seconds, not days.</p>
-                        
-                        <h3>5. Simplified Data Engineering</h3>
-                        <p>Fabric's Data Engineering experience includes Spark, notebooks, and data pipelines, making it easier to build complex data transformation workflows without jumping between different tools. This acceleration of the data engineering process means insights can be delivered to business users faster.</p>
-                        
-                        <h3>6. Enhanced Governance and Security</h3>
-                        <p>With a unified platform, governance and security policies can be applied consistently across all data and analytics workloads. This simplifies compliance and reduces the risk of data breaches or unauthorized access.</p>
-                        
-                        <h2>Real-World Benefits of Migrating to Microsoft Fabric</h2>
-                        
-                        <p>The advantages of Microsoft Fabric aren't just theoretical. Organizations that have made the transition are seeing tangible benefits:</p>
-                        
-                        <ul>
-                            <li><strong>Reduced Total Cost of Ownership:</strong> By consolidating multiple tools into a single platform, organizations can significantly reduce licensing, infrastructure, and operational costs.</li>
-                            <li><strong>Accelerated Time to Insight:</strong> The streamlined data pipeline in Fabric means that raw data can be transformed into actionable insights more quickly, enabling faster business decisions.</li>
-                            <li><strong>Enhanced Collaboration:</strong> Data engineers, data scientists, and business analysts can now work on the same platform, using the same data, fostering better collaboration and innovation.</li>
-                            <li><strong>Future-Proofing:</strong> As a strategic Microsoft platform, Fabric will continue to evolve with new capabilities, ensuring organizations stay at the cutting edge of data analytics.</li>
-                            <li><strong>Simplified Architecture:</strong> Rather than managing a complex ecosystem of tools, organizations can focus on a single, integrated platform, reducing technical debt and simplification maintenance.</li>
+                    <h2>Ad-Hoc Business Requests Analysis</h2>
+                    
+                    <p>Let's explore each of the ten business requests that were addressed using SQL queries, examining both the technical approach and the business implications of the findings.</p>
+                    
+                    <h3>Request 1: Identifying Atliq Exclusive's APAC Markets</h3>
+                    <p><strong>Business Objective:</strong> Determine the markets in which the customer "Atliq Exclusive" operates within the APAC region.</p>
+                    
+                    <p>The SQL query filtered the dim_customer table to identify distinct markets where Atliq Exclusive operates within the APAC region. The results revealed that Atliq Exclusive has established a presence in eight APAC markets: Australia, Bangladesh, India, Indonesia, Japan, New Zealand, Philippines, and South Korea.</p>
+                    
+                    <p>This information provides valuable insights into Atliq Exclusive's geographical footprint, which can inform regional marketing strategies, supply chain optimization, and potential market expansion opportunities.</p>
+                    
+                    <h3>Request 2: Product Portfolio Growth Analysis (2020-2021)</h3>
+                    <p><strong>Business Objective:</strong> Calculate the percentage increase in unique products between fiscal years 2020 and 2021.</p>
+                    
+                    <p>The analysis revealed a significant 36.33% increase in unique products from 245 in 2020 to 334 in 2021. This substantial growth indicates an aggressive product diversification strategy by Atliq Hardwares during this period.</p>
+                    
+                    <p>For business stakeholders, this metric serves as a key indicator of product development momentum and portfolio expansion. Such rapid growth might suggest either a strategic push into new market segments or a response to emerging consumer demands.</p>
+                    
+                    <h3>Request 3: Product Distribution Across Segments</h3>
+                    <p><strong>Business Objective:</strong> Provide a segment-wise breakdown of product counts in descending order.</p>
+                    
+                    <p>The analysis categorized the product portfolio by segments, revealing that "Notebook" leads with 129 unique products, followed by "Accessories" (116), "Peripherals" (84), "Desktop" (32), "Storage" (27), and "Networking" (9).</p>
+                    
+                    <p>This distribution clearly indicates Atliq's strategic focus on portable computing solutions, with notebooks and their accessories constituting the largest portion of their product portfolio. For business leaders, this insight helps evaluate whether the current product distribution aligns with market trends and company strategy.</p>
+                    
+                    <h3>Request 4: Segment Growth Analysis (2020-2021)</h3>
+                    <p><strong>Business Objective:</strong> Identify which segment experienced the most significant increase in unique products between 2020 and 2021.</p>
+                    
+                    <p>The follow-up analysis determined that the "Accessories" segment saw the most substantial growth, with 34 new unique products added in 2021. "Notebook" and "Peripherals" tied for second place with 16 new products each, followed by "Desktop" (15), "Storage" (5), and "Networking" (3).</p>
+                    
+                    <p>This growth pattern suggests a strategic emphasis on expanding the accessories line, which often carries higher profit margins and complements the company's strong notebook segment. For product managers, this trend highlights potential areas for continued investment or realignment based on business objectives.</p>
+                    
+                    <h3>Request 5: Manufacturing Cost Extremes</h3>
+                    <p><strong>Business Objective:</strong> Identify products with the highest and lowest manufacturing costs.</p>
+                    
+                    <p>The analysis identified "AQ HOME Allin1 Gen 2" as the product with the highest manufacturing cost at $240.54, while "AQ Master wired x1 Ms" had the lowest cost at just $0.89.</p>
+                    
+                    <p>This stark contrast in manufacturing costs across the product range provides valuable insights for cost management, pricing strategy, and profitability analysis. Products with exceptionally high manufacturing costs might require special attention to ensure they maintain acceptable profit margins.</p>
+                    
+                    <h3>Request 6: Top Discount Recipients in India (2021)</h3>
+                    <p><strong>Business Objective:</strong> Identify the top 5 customers in India who received the highest average pre-invoice discounts during fiscal year 2021.</p>
+                    
+                    <p>The analysis revealed that Flipkart received the highest average discount rate at 30.83%, followed closely by Viveks (30.38%), Ezone (30.28%), Croma (30.25%), and Amazon (29.33%).</p>
+                    
+                    <p>This information is crucial for discount strategy evaluation. The similar discount levels across major e-commerce and retail chains suggest a standardized approach to large customer accounts in India. Sales managers can use this data to optimize discount strategies and assess their impact on profitability.</p>
+                    
+                    <h3>Request 7: Monthly Gross Sales Analysis for Atliq Exclusive</h3>
+                    <p><strong>Business Objective:</strong> Generate a month-by-month report of gross sales for the customer "Atliq Exclusive" to identify performance patterns.</p>
+                    
+                    <p>The analysis tracked Atliq Exclusive's gross sales across all months in both 2020 and 2021, revealing significant performance variations. November consistently emerged as the top-performing month in both years, with $15.23 million in 2020 and $32.25 million in 2021. March 2020 showed the lowest performance at just $0.77 million.</p>
+                    
+                    <p>This monthly performance data provides essential insights into seasonality patterns and year-over-year growth. The consistent November peak suggests potential holiday season sales impact, while the dramatic improvement from March 2020 to March 2021 (from $0.77M to $19.15M) could indicate either market recovery post-disruption or successful strategic initiatives.</p>
+                    
+                    <h3>Request 8: Quarterly Sales Performance in 2020</h3>
+                    <p><strong>Business Objective:</strong> Determine which quarter of 2020 achieved the highest total sales quantity.</p>
+                    
+                    <p>The quarterly analysis for 2020 revealed that Q1 achieved the highest sales volume with 7,005,619 units sold, followed by Q2 (6,649,642), Q4 (5,042,541), and Q3 (2,075,087).</p>
+                    
+                    <p>This quarterly distribution highlights significant seasonal variations in sales volume, with Q3 performing notably below other quarters. This pattern could inform inventory planning, marketing campaign timing, and production scheduling to align with expected demand fluctuations.</p>
+                    
+                    <h3>Request 9: Channel Contribution Analysis (2021)</h3>
+                    <p><strong>Business Objective:</strong> Determine which sales channel contributed the most to gross sales in fiscal year 2021 and calculate percentage contributions.</p>
+                    
+                    <p>The analysis identified "Retailer" as the dominant sales channel, accounting for 73.22% of gross sales ($1,924.2 million) in 2021. "Direct" sales contributed 15.48% ($406.7 million), while "Distributor" sales accounted for 11.31% ($297.2 million).</p>
+                    
+                    <p>This channel distribution clearly demonstrates Atliq's heavy reliance on retail partners for revenue generation. For business strategists, this insight could prompt discussions about channel diversification, retailer relationship management, or potential optimization of underperforming channels.</p>
+                    
+                    <h3>Request 10: Top-Performing Products by Division (2021)</h3>
+                    <p><strong>Business Objective:</strong> Identify the top 3 products in each division based on total sold quantity in fiscal year 2021.</p>
+                    
+                    <p>The analysis identified the following top performers by division:</p>
+                    <ul>
+                        <li><strong>N & S Division:</strong> "AQ Pen Drive 2 IN 1" (701,373 units), "AQ Pen Drive DRC" (688,003 units), and another "AQ Pen Drive DRC" variant (676,245 units)</li>
+                        <li><strong>P & A Division:</strong> "AQ Gamers Ms" (428,498 units), "AQ Maxima Ms" (419,865 units), and another "AQ Maxima Ms" variant (419,471 units)</li>
+                        <li><strong>PC Division:</strong> "AQ Digit" (17,434 units), "AQ Velocity" (17,280 units), and another "AQ Digit" variant (17,275 units)</li>
+                    </ul>
+                    
+                    <p>This product-level performance data helps identify star performers within each division, informing inventory management, marketing focus, and potential product development directions.</p>
+                    
+                    <div class="bg-gray-50 p-6 rounded-xl my-8">
+                        <h3 class="text-gray-800 mt-0">SQL Techniques Used in the Project</h3>
+                        <ul class="mb-0">
+                            <li><strong>JOINs:</strong> Combining data from multiple tables</li>
+                            <li><strong>Window Functions:</strong> For ranking products and complex calculations</li>
+                            <li><strong>Common Table Expressions (CTEs):</strong> Breaking complex queries into manageable parts</li>
+                            <li><strong>Aggregate Functions:</strong> Calculating totals, averages, and percentages</li>
+                            <li><strong>CASE Statements:</strong> Handling conditional logic</li>
+                            <li><strong>String Manipulation:</strong> Dealing with text data</li>
                         </ul>
-                        
-                        <h2>Migration Strategies: Moving from Power BI to Microsoft Fabric</h2>
-                        
-                        <p>Transitioning to Microsoft Fabric doesn't have to be an all-or-nothing proposition. Here are some practical approaches to consider:</p>
-                        
-                        <h3>Phased Migration</h3>
-                        <p>Start by moving specific workloads or departments to Fabric while maintaining existing Power BI implementations elsewhere. This allows you to validate the benefits and build expertise before a full migration.</p>
-                        
-                        <h3>New Project Approach</h3>
-                        <p>Implement Fabric for new analytics projects while gradually transitioning existing workloads. This minimizes disruption to current operations while still moving toward the target architecture.</p>
-                        
-                        <h3>Strategic Workload Prioritization</h3>
-                        <p>Identify which workloads would benefit most from Fabric's capabilities—perhaps those with performance issues or real-time requirements—and prioritize migrating those first.</p>
-                        
-                        <h3>Hybrid Architecture</h3>
-                        <p>During the transition, maintain a hybrid architecture where some data lives in Fabric while other systems continue to use traditional approaches. Fabric's connectivity options make this a viable interim solution.</p>
-                        
-                        <h2>Conclusion: Embracing the Future of Data Architecture</h2>
-                        
-                        <p>The shift from traditional Power BI architecture to Microsoft Fabric represents more than just a technology upgrade—it's a strategic transformation that aligns with the evolving needs of data-driven organizations. By addressing the fundamental limitations of siloed approaches, Fabric enables organizations to build a more agile, scalable, and unified data ecosystem.</p>
-                        
-                        <p>As a Microsoft-certified professional who has guided organizations through this transition, I can attest that while the journey requires careful planning and execution, the destination is well worth the effort. Microsoft Fabric isn't just the future of Microsoft's data platform; it's the future of enterprise data architecture.</p>
-                        
-                        <p>The organizations that embrace this shift early will gain significant competitive advantages in their ability to derive insights from data faster and more effectively than their peers. In the data-driven economy, that's a difference that will increasingly determine winners and losers.</p>
-                        
-                        <p>Are you ready to reimagine your data architecture for the future? The time to start that journey is now.</p>
                     </div>
                     
-                    <div class="mt-8 pt-6 border-t border-gray-200">
-                        <div class="flex space-x-4">
-                            <button class="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full text-gray-600 hover:bg-gray-100 transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                                </svg>
-                                Like (24)
-                            </button>
-                            <button class="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full text-gray-600 hover:bg-gray-100 transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                                </svg>
-                                Comment (8)
-                            </button>
-                            <button class="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full text-gray-600 hover:bg-gray-100 transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="18" cy="5" r="3"></circle>
-                                    <circle cx="6" cy="12" r="3"></circle>
-                                    <circle cx="18" cy="19" r="3"></circle>
-                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-                                </svg>
-                                Share
-                            </button>
-                        </div>
+                    <h2>Key Insights and Business Implications</h2>
+                    
+                    <p>The comprehensive analysis of Atliq Hardwares' data has yielded several valuable business insights:</p>
+                    
+                    <h3>Product Strategy Insights</h3>
+                    <p>The significant 36.33% growth in unique products between 2020 and 2021, particularly in the Accessories segment, demonstrates an aggressive product diversification strategy. The notebook-heavy product portfolio indicates a clear strategic focus on portable computing solutions, aligned with broader industry trends toward mobility.</p>
+                    
+                    <h3>Sales and Distribution Insights</h3>
+                    <p>The analysis revealed the critical importance of the retail channel, which generated over 73% of gross sales in 2021. This highlights both a strength in retail partnerships and a potential vulnerability in channel concentration. The consistent seasonal patterns, with November showing peak performance, provide valuable guidance for inventory and marketing planning.</p>
+                    
+                    <h3>Customer Relationship Insights</h3>
+                    <p>The discount analysis for Indian customers revealed remarkably similar discount levels across major e-commerce and retail partners, suggesting a standardized approach to key accounts. This could be examined further to determine if more nuanced, performance-based discount structures might yield better results.</p>
+                    
+                    <h3>Manufacturing and Cost Insights</h3>
+                    <p>The extreme variation in manufacturing costs across different products (from $0.89 to $240.54) highlights the diverse nature of Atliq's product portfolio and the importance of product-specific margin management.</p>
+                    
+                    <h2>Conclusion and Future Directions</h2>
+                    
+                    <p>This SQL-based analysis of Atliq Hardwares' business data demonstrates the power of structured database queries in extracting actionable business intelligence. By systematically addressing ten diverse business questions, we've uncovered valuable insights across multiple business dimensions including market presence, product strategy, sales performance, cost management, and customer relationships.</p>
+                    
+                    <p>For Atliq Hardwares, these insights could inform numerous strategic decisions, from market expansion priorities to product development focus areas, from channel optimization strategies to discount structure revisions. Most importantly, this analysis establishes a template for ongoing data-driven decision making, where business questions can be systematically translated into SQL queries to extract relevant insights.</p>
+                    
+                    <p>In an increasingly competitive consumer goods landscape, this analytical capability represents a significant competitive advantage, enabling more informed, evidence-based decision making across all levels of the organization.</p>
+                    
+                    <div class="border-t border-gray-200 mt-8 pt-6">
+                        <h3>References and Sources</h3>
+                        <p>The data used in this analysis represents a fictional dataset created for educational purposes as part of a resume project challenge. The original dataset and challenge can be accessed at: <a href="https://github.com/sulaiman013/My-Personal-Projects/tree/master/AD-HOC%20Requests%20%7C%20Consumer%20Goods%20Domain%20%7C%20SQL%20Project" target="_blank">CodeBasics Resume Project Challenge</a>.</p>
+                    </div>
+                </div>
+                
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <div class="flex space-x-4">
+                        <button class="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full text-gray-600 hover:bg-gray-100 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            Like (15)
+                        </button>
+                        <button class="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full text-gray-600 hover:bg-gray-100 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            Comment (3)
+                        </button>
+                        <button class="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full text-gray-600 hover:bg-gray-100 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="18" cy="5" r="3"></circle>
+                                <circle cx="6" cy="12" r="3"></circle>
+                                <circle cx="18" cy="19" r="3"></circle>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                            </svg>
+                            Share
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- More Blog Posts -->
-        <div class="max-w-4xl mx-auto">
+        <!-- Author bio -->
+        <div class="max-w-4xl mx-auto mt-8 bg-white rounded-2xl shadow-lg p-8 animate-fadeInUp delay-200">
+            <div class="flex items-start">
+                <div class="w-16 h-16 rounded-full bg-teal-100 flex items-center justify-center">
+                    <span class="text-teal-600 font-bold text-xl">SA</span>
+                </div>
+                <div class="ml-6">
+                    <h3 class="text-xl font-semibold text-gray-800">About the Author</h3>
+                    <p class="text-gray-600 mt-2">Sulaiman Ahmed is a Data Analytics Engineer with expertise in SQL, Power BI, Python, and Microsoft Fabric. With 5+ years of experience across academia and industry, he specializes in transforming complex data into actionable business insights. Sulaiman holds 4 Microsoft certifications and has completed 250+ data analytics projects.</p>
+                    <div class="mt-4 flex gap-3">
+                        <a href="https://linkedin.com/in/sulaimanahmed" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-700 flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/sulaiman013" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-700 flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Related Posts -->
+        <div class="max-w-4xl mx-auto mt-12 animate-fadeInUp delay-300">
             <h2 class="text-2xl font-bold text-gray-800 mb-6">More Articles</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Blog Post 1 -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                    <div class="h-40 bg-gradient-to-r from-teal-400 to-emerald-500 flex items-center justify-center p-4">
-                        <h3 class="text-xl font-bold text-white text-center">5 Power BI DAX Functions Every Analyst Should Master</h3>
+                    <div class="h-40 bg-gradient-to-r from-blue-400 to-indigo-500 flex items-center justify-center p-4">
+                        <h3 class="text-xl font-bold text-white text-center px-4">The Future of Data Architecture: From Power BI to Microsoft Fabric</h3>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-gray-500 mb-2">March 20, 2025 · 12 min read</div>
+                        <p class="text-gray-600 mb-4">Explore why transitioning from traditional Power BI architectures to Microsoft Fabric is essential for organizations looking to scale their data operations efficiently.</p>
+                        <a href="#" class="text-teal-600 hover:text-teal-700 font-medium">Read More →</a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-40 bg-gradient-to-r from-purple-400 to-pink-500 flex items-center justify-center p-4">
+                        <h3 class="text-xl font-bold text-white text-center px-4">5 Power BI DAX Functions Every Analyst Should Master</h3>
                     </div>
                     <div class="p-6">
                         <div class="text-sm text-gray-500 mb-2">February 15, 2025 · 8 min read</div>
@@ -355,59 +519,16 @@
                         <a href="#" class="text-teal-600 hover:text-teal-700 font-medium">Read More →</a>
                     </div>
                 </div>
-                
-                <!-- Blog Post 2 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                    <div class="h-40 bg-gradient-to-r from-blue-400 to-indigo-500 flex items-center justify-center p-4">
-                        <h3 class="text-xl font-bold text-white text-center">Building a Data Lakehouse with Microsoft Fabric</h3>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-sm text-gray-500 mb-2">January 28, 2025 · 10 min read</div>
-                        <p class="text-gray-600 mb-4">A step-by-step guide to implementing a modern data lakehouse architecture using Microsoft Fabric for improved data management and analytics.</p>
-                        <a href="#" class="text-teal-600 hover:text-teal-700 font-medium">Read More →</a>
-                    </div>
-                </div>
-                
-                <!-- Blog Post 3 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                    <div class="h-40 bg-gradient-to-r from-purple-400 to-pink-500 flex items-center justify-center p-4">
-                        <h3 class="text-xl font-bold text-white text-center">Real-time Analytics with KQL in Microsoft Fabric</h3>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-sm text-gray-500 mb-2">January 10, 2025 · 9 min read</div>
-                        <p class="text-gray-600 mb-4">Learn how to leverage Kusto Query Language (KQL) in Microsoft Fabric to analyze streaming data and implement real-time dashboards for your business.</p>
-                        <a href="#" class="text-teal-600 hover:text-teal-700 font-medium">Read More →</a>
-                    </div>
-                </div>
-                
-                <!-- Blog Post 4 -->
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                    <div class="h-40 bg-gradient-to-r from-amber-400 to-orange-500 flex items-center justify-center p-4">
-                        <h3 class="text-xl font-bold text-white text-center">Data Modeling Best Practices for Scale</h3>
-                    </div>
-                    <div class="p-6">
-                        <div class="text-sm text-gray-500 mb-2">December 18, 2024 · 7 min read</div>
-                        <p class="text-gray-600 mb-4">Expert tips for designing scalable data models that maintain performance even as your data volumes grow, with practical examples using Power BI and SQL.</p>
-                        <a href="#" class="text-teal-600 hover:text-teal-700 font-medium">Read More →</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- More Posts Button -->
-            <div class="mt-12 text-center">
-                <button class="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors shadow-md">
-                    Load More Articles
-                </button>
             </div>
         </div>
         
         <!-- Newsletter -->
-        <div class="max-w-4xl mx-auto mt-20 bg-gradient-to-r from-teal-500 to-teal-600 rounded-2xl shadow-lg overflow-hidden">
+        <div class="max-w-4xl mx-auto mt-16 bg-gradient-to-r from-teal-500 to-teal-600 rounded-2xl shadow-lg overflow-hidden">
             <div class="p-8 md:p-12">
                 <div class="flex flex-col md:flex-row items-center">
                     <div class="md:w-3/5 mb-6 md:mb-0 md:pr-8">
                         <h2 class="text-2xl md:text-3xl font-bold text-white mb-3">Subscribe to My Newsletter</h2>
-                        <p class="text-teal-100">Get the latest data analytics insights, Microsoft Fabric tutorials, and Power BI tips delivered straight to your inbox.</p>
+                        <p class="text-teal-100">Get the latest data analytics insights, SQL tutorials, and Microsoft Fabric tips delivered straight to your inbox.</p>
                     </div>
                     <div class="md:w-2/5">
                         <form class="space-y-3">
@@ -452,7 +573,7 @@
                 </div>
             </div>
             <div class="mt-6 text-center text-teal-200 text-sm">
-                &copy; <span id="current-year"></span> Sulaiman Ahmed. All rights reserved.
+                &copy; <span id="current-year">2025</span> Sulaiman Ahmed. All rights reserved.
             </div>
         </div>
     </footer>
