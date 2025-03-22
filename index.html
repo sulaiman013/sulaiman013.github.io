@@ -955,5 +955,78 @@
     });
   });
 </script>
+    <script>
+  // Animate background waves
+  const waves = document.querySelectorAll('.absolute.bottom-0 path');
+  
+  waves.forEach((wave, index) => {
+    // Create unique animation for each wave
+    const animationDuration = 8 + (index * 4); // seconds
+    const animationDelay = index * 2; // seconds
+    
+    wave.style.animation = `wave ${animationDuration}s ease-in-out ${animationDelay}s infinite alternate`;
+    wave.style.transformOrigin = 'center bottom';
+  });
+
+  // Add wave animation keyframes if not already present
+  if (!document.querySelector('#wave-animation')) {
+    const styleSheet = document.createElement('style');
+    styleSheet.id = 'wave-animation';
+    styleSheet.textContent = `
+      @keyframes wave {
+        0% {
+          transform: translateY(0) scaleY(1);
+        }
+        50% {
+          transform: translateY(-10px) scaleY(1.05);
+        }
+        100% {
+          transform: translateY(0) scaleY(1);
+        }
+      }
+
+      .hover-lift {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+    `;
+    document.head.appendChild(styleSheet);
+  }
+
+  // Add main content animations
+  document.addEventListener('DOMContentLoaded', function() {
+    // Fade in elements when they come into view
+    const fadeElements = document.querySelectorAll('section, .bg-white');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.transition = 'opacity 0.6s ease-in-out, transform 0.6s ease-in-out';
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeElements.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      observer.observe(el);
+    });
+    
+    // Animate skill bars
+    const skillBars = document.querySelectorAll('.h-2.bg-teal-500');
+    skillBars.forEach(bar => {
+      const width = bar.style.width;
+      bar.style.width = '0';
+      setTimeout(() => {
+        bar.style.transition = 'width 1s ease-in-out';
+        bar.style.width = width;
+      }, 300);
+    });
+  });
+</script>
 </body>
 </html>
