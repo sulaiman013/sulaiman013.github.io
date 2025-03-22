@@ -139,3 +139,55 @@ body {
 .h-2.bg-teal-500 {
   transition: width 1.5s ease-out;
 }
+/* Wave animations */
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.absolute.bottom-0 path {
+  animation: wave 15s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+/* Make second wave slower */
+.absolute.bottom-0.translate-y-20 path {
+  animation-duration: 20s;
+  animation-delay: 2s;
+}
+
+/* Skill bar animations */
+.h-2.bg-teal-500 {
+  transition: width 1.5s ease-out;
+  width: 0 !important; /* Start at zero width */
+}
+
+/* Override the width after loading */
+.loaded .h-2.bg-teal-500[data-width="95%"] {
+  width: 95% !important;
+}
+.loaded .h-2.bg-teal-500[data-width="90%"] {
+  width: 90% !important;
+}
+.loaded .h-2.bg-teal-500[data-width="87%"] {
+  width: 87% !important;
+}
+.loaded .h-2.bg-teal-500[data-width="85%"] {
+  width: 85% !important;
+}
+.loaded .h-2.bg-teal-500[data-width="82%"] {
+  width: 82% !important;
+}
+.loaded .h-2.bg-teal-500[data-width="80%"] {
+  width: 80% !important;
+}
+.loaded .h-2.bg-teal-500[data-width="75%"] {
+  width: 75% !important;
+}
