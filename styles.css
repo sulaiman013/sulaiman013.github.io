@@ -191,3 +191,10 @@ body {
 .loaded .h-2.bg-teal-500[data-width="75%"] {
   width: 75% !important;
 }
+.animate-width {
+  animation: grow-width 1.5s forwards 0.5s;
+}
+
+@keyframes grow-width {
+  to { width: var(--target-width, attr(data-width)); }
+}
