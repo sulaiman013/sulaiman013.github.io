@@ -90,3 +90,129 @@ body {
 .text-gray-600 {
   color: #4b5563;
 }
+/* Custom styles beyond Tailwind */
+
+/* Animated gradient background */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-gradient-to-br {
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+/* Animated wave */
+.absolute.bottom-0 path {
+  animation: wave 20s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform-origin: center;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Hover effects */
+.hover\:shadow-lg:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-3px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover\:bg-teal-100:hover {
+  transition: background-color 0.3s ease;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Skill bars animation */
+.h-2.rounded-full.bg-teal-500 {
+  transition: width 1.5s ease-out;
+}
+
+/* Fade-in animation for sections */
+section {
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.transition-opacity {
+  transition: opacity 0.6s ease-in-out;
+}
+
+/* Skills timeline animation */
+.skills-timeline .rounded-full {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-timeline .rounded-full:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 15px -3px rgba(0, 184, 169, 0.3);
+}
+
+/* Timeline connection animations */
+.skills-timeline .absolute.top-12 {
+  transition: height 1s ease-out;
+  animation: growLine 1s forwards;
+  height: 0;
+}
+
+@keyframes growLine {
+  from {
+    height: 0;
+  }
+  to {
+    height: 40px;
+  }
+}
+
+/* Pulse animation for contact section */
+.bg-teal-600.hover\:bg-teal-700 {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-teal-600.hover\:bg-teal-700:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.bg-teal-600.hover\:bg-teal-700:hover:after {
+  animation: pulse 1s;
+}
+
+@keyframes pulse {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
