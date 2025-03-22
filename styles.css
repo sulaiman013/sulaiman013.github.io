@@ -18,13 +18,14 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Subtle hover animations */
+/* Hover lift effect */
 .hover-lift {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hover-lift:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 184, 169, 0.1), 0 10px 10px -5px rgba(0, 184, 169, 0.04);
 }
 
 /* Print styles */
@@ -74,7 +75,7 @@ html {
     margin-bottom: 0;
   }
   
-  .skills-timeline .absolute.top-12 {
+  .skills-timeline .absolute.top-16 {
     display: none;
   }
 }
@@ -90,55 +91,40 @@ body {
 .text-gray-600 {
   color: #4b5563;
 }
-/* Custom styles beyond Tailwind */
 
-/* Animated gradient background */
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
+/* Animated wave effects */
+@keyframes wave1 {
+  0%, 100% {
+    transform: translateY(0) scale(1.05);
   }
   50% {
-    background-position: 100% 50%;
+    transform: translateY(-15px) scale(1);
   }
-  100% {
-    background-position: 0% 50%;
+}
+
+@keyframes wave2 {
+  0%, 100% {
+    transform: translateY(-10px) scale(1);
   }
+  50% {
+    transform: translateY(5px) scale(1.03);
+  }
+}
+
+.wave-animation-1 {
+  animation: wave1 12s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.wave-animation-2 {
+  animation: wave2 15s ease-in-out infinite;
+  animation-delay: -3s;
+  transform-origin: center bottom;
 }
 
 .bg-gradient-to-br {
   background-size: 200% 200%;
   animation: gradient 15s ease infinite;
-}
-
-/* Animated wave */
-.absolute.bottom-0 path {
-  animation: wave 20s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-  transform-origin: center;
-}
-
-@keyframes wave {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-/* Hover effects */
-.hover\:shadow-lg:hover {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  transform: translateY(-3px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hover\:bg-teal-100:hover {
-  transition: background-color 0.3s ease;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
 }
 
 /* Skill bars animation */
@@ -166,7 +152,7 @@ section {
 }
 
 /* Timeline connection animations */
-.skills-timeline .absolute.top-12 {
+.skills-timeline .absolute.top-16 {
   transition: height 1s ease-out;
   animation: growLine 1s forwards;
   height: 0;
@@ -177,7 +163,7 @@ section {
     height: 0;
   }
   to {
-    height: 40px;
+    height: 64px;
   }
 }
 
@@ -214,5 +200,54 @@ section {
     width: 500px;
     height: 500px;
     opacity: 0;
+  }
+}
+
+/* Card hover effects */
+.rounded-2xl {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rounded-2xl:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover effects */
+button, .rounded-lg {
+  transition: all 0.3s ease;
+}
+
+/* Certificate card hover */
+.rounded-xl {
+  transition: all 0.3s ease;
+}
+
+.rounded-xl:hover {
+  transform: translateY(-3px);
+}
+
+/* Enhanced tag hover effects */
+.px-3.py-1.bg-teal-50 {
+  transition: all 0.2s ease;
+}
+
+.px-3.py-1.bg-teal-50:hover {
+  background-color: rgba(20, 184, 166, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
