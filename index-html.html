@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sulaiman Ahmed - Data Analytics Engineer</title>
+    <meta name="description" content="4x Microsoft Certified Analytics Engineer with 5 years of data analytics experience in academia and industry.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        teal: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a',
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-white to-teal-50">
+    <!-- Animated Wave Background -->
+    <div class="fixed w-full h-full overflow-hidden z-0">
+        <svg class="absolute bottom-0 left-0 w-full opacity-20" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#00B8A9" fill-opacity="0.5" d="M0,160L48,138.7C96,117,192,75,288,69.3C384,64,480,96,576,128C672,160,768,192,864,176C960,160,1056,96,1152,74.7C1248,53,1344,75,1392,85.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+        <svg class="absolute bottom-0 left-0 w-full opacity-10 translate-y-20" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#00B8A9" fill-opacity="0.7" d="M0,64L48,96C96,128,192,192,288,186.7C384,181,480,107,576,112C672,117,768,203,864,208C960,213,1056,139,1152,117.3C1248,96,1344,128,1392,144L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-40 backdrop-blur-md bg-white/70 shadow-sm">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="font-bold text-xl text-teal-600">Sulaiman Ahmed</div>
+                <div class="hidden md:block">
+                    <ul class="flex space-x-6">
+                        <li><a href="#about" class="py-2 border-b-2 border-teal-500 hover:border-teal-300 transition-colors">About</a></li>
+                        <li><a href="#skills" class="py-2 border-b-2 border-transparent hover:border-teal-300 transition-colors">Skills</a></li>
+                        <li><a href="#experience" class="py-2 border-b-2 border-transparent hover:border-teal-300 transition-colors">Experience</a></li>
+                        <li><a href="#projects" class="py-2 border-b-2 border-transparent hover:border-teal-300 transition-colors">Projects</a></li>
+                        <li><a href="#certifications" class="py-2 border-b-2 border-transparent hover:border-teal-300 transition-colors">Certifications</a></li>
+                        <li><a href="#education" class="py-2 border-b-2 border-transparent hover:border-teal-300 transition-colors">Education</a></li>
+                    </ul>
+                </div>
+                <div class="flex space-x-3">
+                    <a href="https://linkedin.com/in/sulaimanahmed" target="_blank" rel="noopener noreferrer" class="p-2 rounded-full hover:bg-teal-50 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/sulaiman013" target="_blank" rel="noopener noreferrer" class="p-2 rounded-full hover:bg-teal-50 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="mailto:contact@sulaimanahmed.com" class="p-2 rounded-full hover:bg-teal-50 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-6 relative z-10">
+        
+        <!-- Hero Section -->
+        <section id="about" class="py-16">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Sulaiman Ahmed</h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-teal-600 mb-6">Data Analytics Engineer</h2>
+                    <p class="text-lg text-gray-600 mb-6">4x Microsoft Certified Analytics Engineer with <span class="font-semibold">5 years</span> of data analytics experience in academia and industry working on various projects.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors shadow-md">Get In Touch</a>
+                        <a href="/sulaiman_ahmed_resume.pdf" class="border border-teal-600 text-teal-600 hover:bg-teal-50 font-semibold py-2 px-6 rounded-lg transition-colors flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            Download CV
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white rounded-2xl shadow-xl p-6 relative overflow-hidden">
+                        <div class="absolute -right-10 -top-10 w-40 h-40 bg-teal-100 rounded-full opacity-50"></div>
+                        <div class="relative z-10">
+                            <h3 class="text-xl font-semibold mb-4 flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600">
+                                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                                </svg>
+                                Skills Journey
+                            </h3>
+                            <div class="skills-timeline bg-white p-4 rounded-xl shadow-sm">
+                                <div class="flex items-stretch">
+                                    <!-- Timeline nodes for years -->
+                                    <div class="flex flex-col">
+                                        <div class="flex items-center mb-4 last:mb-0 relative">
+                                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center text-white font-semibold shadow-md">
+                                                2020
+                                            </div>
+                                            <div class="absolute top-12 left-6 h-10 w-0.5 bg-teal-200"></div>
+                                        </div>
+                                        <div class="flex items-center mb-4 last:mb-0 relative">
+                                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center text-white font-semibold shadow-md">
+                                                2021
+                                            </div>
+                                            <div class="absolute top-12 left-6 h-10 w-0.5 bg-teal-200"></div>
+                                        </div>
+                                        <div class="flex items-center mb-4 last:mb-0 relative">
+                                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center text-white font-semibold shadow-md">
+                                                2022
+                                            </div>
+                                            <div class="absolute top-12 left-6 h-10 w-0.5 bg-teal-200"></div>
+                                        </div>
+                                        <div class="flex items-center mb-4 last:mb-0 relative">
+                                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center text-white font-semibold shadow-md">
+                                                2023
+                                            </div>
+                                            <div class="absolute top-12 left-6 h-10 w-0.5 bg-teal-200"></div>
+                                        </div>
+                                        <div class="flex items-center mb-0 relative">
+                                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center text-white font-semibold shadow-md">
+                                                2024
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Skills clusters by year -->
+                                    <div class="ml-4 flex-1">
+                                        <!-- 2020 Skills -->
+                                        <div class="mb-6 last:mb-0">
+                                            <div class="flex flex-wrap gap-2 mb-2">
+                                                <div class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100 hover:bg-teal-100 transition-colors cursor-pointer">
+                                                    Excel
+                                                </div>
+                                                <div class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100 hover:bg-teal-100 transition-colors cursor-pointer">
+                                                    SPSS
+                                                </div>
+                                                <div class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100 hover:bg-teal-100 transition-colors cursor-pointer">
+                                                    Stata
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- 2021 Skills -->
+                                        <div class="mb-6 last:mb-0">
+                                            <div class="flex flex-wrap gap-2 mb-2">
+                                                <div class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100 hover:bg-teal-100 transition-colors cursor-pointer">
+                                                    R
+                                                </div>
+                                                <div class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100 hover:bg-teal-100 transition-colors cursor-pointer">
+                                                    Statistics
+                                                </div>
+                                                <div class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100 hover:bg-teal-100 transition-colors cursor-pointer">
+                                                    Machine Learning
+                                                </div>
+                                                <div class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100 hover:bg-teal-100 transition-colors cursor-pointer">
+                                                    Microsoft Office
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- 2022 Skills -->
+                                        <div class="mb-6 last:mb-0">
+                                            <div class="flex flex-wrap gap-2 mb-2">
+                                                <div class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100 hover:bg-teal-100 transition-colors cursor-pointer">
+                                                    Power BI
+                                                </div>
+                                                <div class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100 hover:bg-teal-100 transition-colors cursor-pointer">
+                                                    SQL
+                                                </div>
+                                                <div class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100 hover:bg-teal-100 transition-colors cursor-pointer">
+                                                    Python
+                                                </div>
+                                                <div class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100 hover:bg-teal-100 transition-colors cursor-pointer">
+                                                    Time Series
+                                                </div>
+                                                <div class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100 hover:bg-teal-100 transition-colors cursor-pointer">
+                                                    Advanced Statistics
+                                                </div>
+                                                <div class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100 hover:bg-teal-100 transition-colors cursor-pointer">
+                                                    Advanced ML
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- 2023 Skills -->
+                                        <div class="mb-6 last:mb-0">
+                                            <div class="flex flex-wrap gap-2 mb-2">
+                                                <div class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100 hover:bg-teal-100 transition-colors cursor-pointer">
+                                                    Data Analytics
+                                                </div>
+                                                <div class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100 hover:bg-teal-100 transition-colors cursor-pointer">
+                                                    Data Science
+                                                </div>
+                                                <div class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100 hover:bg-teal-100 transition-colors cursor-pointer">
+                                                    Power BI Certification
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- 2024 Skills -->
+                                        <div class="mb-0">
+                                            <div class="flex flex-wrap gap-2 mb-2">
+                                                <div class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100 hover:bg-teal-100 transition-colors cursor-pointer">
+                                                    Microsoft Azure
+                                                </div>
+                                                <div class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100 hover:bg-teal-100 transition-colors cursor-pointer">
+                                                    Microsoft Fabric
+                                                </div>
+                                                <div class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-sm font-medium border border-teal-100 hover:bg-teal-100 transition-colors cursor-pointer">
+                                                    Other Certifications
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Networks concept visualization -->
+                                <div class="mt-4 pt-4 border-t border-teal-100">
+                                    <div class="text-center text-sm text-teal-600 font-medium">Skills Growth: From Basic Tools to Advanced Analytics</div>
+                                    <div class="flex justify-between items-center mt-2">
+                                        <div class="text-center">
+                                            <div class="w-10 h-10 rounded-full bg-teal-100 mx-auto mb-1 flex items-center justify-center">
+                                                <span class="text-xs font-medium text-teal-700">2020</span>
+                                            </div>
+                                            <div class="text-xs text-gray-500">Basic Tools</div>
+                                        </div>
+                                        <div class="flex-1 h-0.5 bg-gradient-to-r from-teal-100 to-teal-200"></div>
+                                        <div class="text-center">
+                                            <div class="w-10 h-10 rounded-full bg-teal-200 mx-auto mb-1 flex items-center justify-center">
+                                                <span class="text-xs font-medium text-teal-700">2021</span>
+                                            </div>
+                                            <div class="text-xs text-gray-500">Core Skills</div>
+                                        </div>
+                                        <div class="flex-1 h-0.5 bg-gradient-to-r from-teal-200 to-teal-300"></div>
+                                        <div class="text-center">
+                                            <div class="w-10 h-10 rounded-full bg-teal-300 mx-auto mb-1 flex items-center justify-center">
+                                                <span class="text-xs font-medium text-teal-700">2022</span>
+                                            </div>
+                                            <div class="text-xs text-gray-500">Technical</div>
+                                        </div>
+                                        <div class="flex-1 h-0.5 bg-gradient-to-r from-teal-300 to-teal-400"></div>
+                                        <div class="text-center">
+                                            <div class="w-10 h-10 rounded-full bg-teal-400 mx-auto mb-1 flex items-center justify-center">
+                                                <span class="text-xs font-medium text-teal-700">2023</span>
+                                            </div>
+                                            <div class="text-xs text-gray-500">Advanced</div>
+                                        </div>
+                                        <div class="flex-1 h-0.5 bg-gradient-to-r from-teal-400 to-teal-500"></div>
+                                        <div class="text-center">
+                                            <div class="w-10 h-10 rounded-full bg-teal-500 mx-auto mb-1 flex items-center justify-center">
+                                                <span class="text-xs font-medium text-teal-700">2024</span>
+                                            </div>
+                                            <div class="text-xs text-gray-500">Expert</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 grid grid-cols-3 gap-4">
+                                <div class="text-center">
+                                    <div class="font-bold text-2xl text-gray-800">5+</div>
+                                    <div class="text-gray-500 text-sm">Years of Experience</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="font-bold text-2xl text-gray-800">250+</div>
+                                    <div class="text-gray-500 text-sm">Projects Completed</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="font-bold text-2xl text-gray-800">4</div>
+                                    <div class="text-gray-500 text-sm">Microsoft Certifications</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
+                Technical Skills
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Programming Skills -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Programming</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">SQL</span>
+                                <span class="text-sm text-gray-500">95%</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div
+                                    class="h-2 rounded-full bg-teal-500"
+                                    style="width: 95%"
+                                ></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Python</span>
+                                <span class="text-sm text-gray-500">90%</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div
+                                    class="h-2 rounded-full bg-teal-500"
+                                    style="width: 90%"
+                                ></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">R</span>
+                                <span class="text-sm text-gray-500">87%</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div
+                                    class="h-2 rounded-full bg-teal-500"
+                                    style="width: 87%"
+                                ></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visualization Skills -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Visualization</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Power BI</span>
+                                <span class="text-sm text-gray-500">95%</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div
+                                    class="h-2 rounded-full bg-teal-500"
+                                    style="width: 95%"
+                                ></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Excel</span>
+                                <span class="text-sm text-gray-500">90%</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div
+                                    class="h-2 rounded-full bg-teal-500"
+                                    style="width: 90%"
+                                ></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Python</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div
+                                    class="h-2 rounded-full bg-teal-500"
+                                    style="width: 85%"
+                                ></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">R (ggplot2)</span>
+                                <span class="text-sm text-gray-500">82%</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div
+                                    class="h-2 rounded-full bg-teal-500"
+                                    style="width: 82%"
+                                ></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Tableau</span>
+                                <span class="text-sm text-gray-500">80%</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div
+                                    class="h-2 rounded-full bg-teal-500"
+                                    style="width: 80%"
+                                ></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">SPSS</span>
+                                <span class="text-sm text-gray-500">75%</span>
+                            </div>
+                            <div class="h-2 bg-gray-200 rounded-full">
+                                <div
+                                    class="h-2 rounded-full bg-teal-500"
+                                    style="width: 75%"
+                                ></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SQL Expertise -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">SQL Expertise</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-teal-50 rounded-lg p-4 text-center">
+                            <div class="text-xl font-semibold text-teal-700 mb-1">MySQL</div>
+                            <div class="text-sm text-teal-600">Advanced</div>
+                        </div>
+                        <div class="bg-teal-50 rounded-lg p-4 text-center">
+                            <div class="text-xl font-semibold text-teal-700 mb-1">PostgreSQL</div>
+                            <div class="text-sm text-teal-600">Advanced</div>
+                        </div>
+                        <div class="bg-teal-50 rounded-lg p-4 text-center">
+                            <div class="text-xl font-semibold text-teal-700 mb-1">T-SQL</div>
+                            <div class="text-sm text-teal-600">Advanced</div>
+                        </div>
+                        <div class="bg-teal-50 rounded-lg p-4 text-center">
+                            <div class="text-xl font-semibold text-teal-700 mb-1">Snowflake</div>
+                            <div class="text-sm text-teal-600">Intermediate</div>
+                        </div>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <div class="inline-block px-4 py-2 bg-teal-100 rounded-full text-teal-800 font-medium">
+                            Expert in Database Design & Optimization
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud Skills -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Cloud</h3>
+                    <div class="space-y-6 p-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Microsoft Fabric</span>
+                                <span class="text-sm text-gray-500">75%</span>
+                            </div>
+                            <div class="h-4 bg-gray-200 rounded-full">
+                                <div
+                                    class="h-4 rounded-full bg-gradient-to-r from-teal-400 to-teal-600 flex items-center justify-end pr-2"
+                                    style="width: 75%"
+                                >
+                                    <span class="text-xs font-bold text-white">Advanced</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Microsoft Azure</span>
+                                <span class="text-sm text-gray-500">60%</span>
+                            </div>
+                            <div class="h-4 bg-gray-200 rounded-full">
+                                <div
+                                    class="h-4 rounded-full bg-gradient-to-r from-teal-400 to-teal-600 flex items-center justify-end pr-2"
+                                    style="width: 60%"
+                                >
+                                    <span class="text-xs font-bold text-white">Intermediate</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6 text-center">
+                            <div class="inline-block px-4 py-2 bg-teal-100 rounded-full text-teal-800 font-medium">
+                                4x Microsoft Certified
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section - Zettelkasten Style -->
+        <section id="experience" class="py-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Professional Experience</h2>
+            
+            <div class="space-y-8">
+                <!-- Current Position -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-teal-600">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Associate Analytics Engineer & Technical Content Lead</h3>
+                            <div class="text-teal-600 font-medium">Data Crafters</div>
+                        </div>
+                        <div class="text-gray-500 mt-2 md:mt-0 text-sm md:text-right">Nov 2024 - Present</div>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                        <li>Collect, process, and analyze large datasets to develop dashboards, reports, and actionable insights</li>
+                        <li>Collaborate with cross-functional teams to address data needs and implement cleansing processes</li>
+                        <li>Coordinate and manage marketing content pipelines, ensuring deadlines are met</li>
+                    </ul>
+                    
+                    <!-- Zettelkasten-style linked notes -->
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <div class="px-3 py-1 bg-teal-50 text-teal-700 text-sm rounded-lg flex items-center">
+                            <span>Power BI</span>
+                        </div>
+                        <div class="px-3 py-1 bg-teal-50 text-teal-700 text-sm rounded-lg flex items-center">
+                            <span>Data Analytics</span>
+                        </div>
+                        <div class="px-3 py-1 bg-teal-50 text-teal-700 text-sm rounded-lg flex items-center">
+                            <span>Technical Leadership</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Data Scientist -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-teal-500">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Data Scientist</h3>
+                            <div class="text-teal-600 font-medium">Insightin Technology Ltd.</div>
+                        </div>
+                        <div class="text-gray-500 mt-2 md:mt-0 text-sm md:text-right">Jan 2024 - Oct 2024</div>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                        <li>Transformed data into actionable business intelligence by gathering requirements, ensuring data quality</li>
+                        <li>Optimized and automated MSSQL databases, enhancing stored procedures and view efficiency</li>
+                        <li>Conducted R&D initiatives for advanced data solutions in the healthcare sector</li>
+                        <li>Fostered collaborative relationships with marketing stakeholders to align technical solutions</li>
+                    </ul>
+                    
+                    <!-- Zettelkasten-style linked notes -->
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <div class="px-3 py-1 bg-teal-50 text-teal-700 text-sm rounded-lg flex items-center">
+                            <span>Healthcare</span>
+                        </div>
+                        <div class="px-3 py-1 bg-teal-50 text-teal-700 text-sm rounded-lg flex items-center">
+                            <span>MSSQL</span>
+                        </div>
+                        <div class="px-3 py-1 bg-teal-50 text-teal-700 text-sm rounded-lg flex items-center">
+                            <span>Business Intelligence</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Freelance Data Analyst -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-teal-400">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Freelance Data Analyst</h3>
+                            <div class="text-teal-600 font-medium">Fiverr</div>
+                        </div>
+                        <div class="text-gray-500 mt-2 md:mt-0 text-sm md:text-right">Nov 2020 - Present</div>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                        <li>Prepared 10+ BI dashboards in Power BI/Tableau tailored to client requirements</li>
+                        <li>Evaluated and analyzed 250+ projects using MySQL, R/RStudio, Python</li>
+                        <li>Implemented statistical analysis techniques like regression, dbscan, random forest, XGBoost</li>
+                    </ul>
+                    
+                    <!-- Zettelkasten-style linked notes -->
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <div class="px-3 py-1 bg-teal-50 text-teal-700 text-sm rounded-lg flex items-center">
+                            <span>Statistical Analysis</span>
+                        </div>
+                        <div class="px-3 py-1 bg-teal-50 text-teal-700 text-sm rounded-lg flex items-center">
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="px-3 py-1 bg-teal-50 text-teal-700 text-sm rounded-lg flex items-center">
+                            <span>Client Projects</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Research Analyst -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 border-l-4 border-teal-300">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">Research Analyst</h3>
+                            <div class="text-teal-600 font-medium">SUST Research Center, Sylhet</div>
+                        </div>
+                        <div class="text-gray-500 mt-2 md:mt-0 text-sm md:text-right">Aug 2020 - Feb 2022</div>
+                    </div>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 ml-4">
+                        <li>Conducted data collection for research projects, increasing productivity by 75%</li>
+                        <li>Performed exploratory data analysis in R and developed data models with Power BI</li>
+                        <li>Web scraped university faculty data and created visualizations using ggplot2 in R</li>
+                        <li>Identified factors associated with students' anxiety and teachers' stress</li>
+                    </ul>
+                    
+                    <!-- Zettelkasten-style linked notes -->
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <div class="px-3 py-1 bg-teal-50 text-teal-700 text-sm rounded-lg flex items-center">
+                            <span>Academic Research</span>
+                        </div>
+                        <div class="px-3 py-1 bg-teal-50 text-teal-700 text-sm rounded-lg flex items-center">
+                            <span>Web Scraping</span>
+                        </div>
+                        <div class="px-3 py-1 bg-teal-50 text-teal-700 text-sm rounded-lg flex items-center">
+                            <span>R Programming</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Featured Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group">
+                    <div class="relative h-48 bg-gradient-to-r from-teal-500 to-cyan-400">
+                        <div class="absolute inset-0 flex items-center justify-center text-white">
+                            <h3 class="text-2xl font-bold text-center px-4">Business 360</h3>
+                        </div>
+                        <div class="absolute bottom-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <a href="https://github.com/sulaiman013/My-Personal-Projects/tree/master/Business%20Insights%20360" target="_blank" rel="noopener noreferrer" class="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-white/40 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/posts/sulaimanahmed_business-insights-360-dashboard-end-to-activity-7122195979948199936-ndg2" target="_blank" rel="noopener noreferrer" class="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-white/40 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-teal-600 font-medium mb-2">Brick & mortar and e-commerce</div>
+                        <p class="text-gray-600 mb-4">Developed a Power BI multi-view dashboard for AtliQ Hardware's six departments to help make data-driven decisions and analyze sales trends.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">Power BI</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">MySQL</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">Excel</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">DAX</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group">
+                    <div class="relative h-48 bg-gradient-to-r from-cyan-500 to-teal-400">
+                        <div class="absolute inset-0 flex items-center justify-center text-white">
+                            <h3 class="text-2xl font-bold text-center px-4">Maven E-Commerce Requests</h3>
+                        </div>
+                        <div class="absolute bottom-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <a href="https://github.com/sulaiman013/My-Personal-Projects/tree/master/Maven%20Ecommerce" target="_blank" rel="noopener noreferrer" class="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-white/40 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/posts/sulaimanahmed_maven-e-commerce-sql-data-analysis-project-activity-7125568547639947264-Hwq_" target="_blank" rel="noopener noreferrer" class="bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-white/40 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-teal-600 font-medium mb-2">e-commerce</div>
+                        <p class="text-gray-600 mb-4">Performed data analysis for Maven Fuzzy Factory's e-commerce platform, focusing on the first eight months of operations to guide business strategy.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">SQL</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">Data Analysis</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">A/B Testing</span>
+                            <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded">Business Intelligence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600">
+                    <circle cx="12" cy="8" r="7"></circle>
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                </svg>
+                Certifications & Awards
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl shadow-md p-5 border-l-4 border-teal-600 hover:shadow-lg transition-shadow">
+                    <h3 class="font-semibold text-lg">Microsoft Certified: Power BI Data Analyst Associate</h3>
+                    <p class="text-gray-600">Microsoft</p>
+                    <a href="https://learn.microsoft.com/api/credentials/share/en-us/Sulaiman-1779/D86F89EC13EB4F44?sharingId=2F8D8D7121F7566C" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-700 text-sm font-medium mt-2 inline-block">View Credential</a>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-5 border-l-4 border-teal-600 hover:shadow-lg transition-shadow">
+                    <h3 class="font-semibold text-lg">Microsoft Certified: Fabric Analytics Engineer Associate</h3>
+                    <p class="text-gray-600">Microsoft</p>
+                    <a href="https://learn.microsoft.com/api/credentials/share/en-us/Sulaiman-1779/4BF83C913084A933?sharingId=2F8D8D7121F7566C" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-700 text-sm font-medium mt-2 inline-block">View Credential</a>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-5 border-l-4 border-teal-600 hover:shadow-lg transition-shadow">
+                    <h3 class="font-semibold text-lg">Microsoft Certified: Fabric Data Engineer Associate</h3>
+                    <p class="text-gray-600">Microsoft</p>
+                    <a href="https://learn.microsoft.com/api/credentials/share/en-us/Sulaiman-1779/BA7F6AE3F38244C0?sharingId=2F8D8D7121F7566C" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-700 text-sm font-medium mt-2 inline-block">View Credential</a>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-5 border-l-4 border-teal-600 hover:shadow-lg transition-shadow">
+                    <h3 class="font-semibold text-lg">Microsoft Certified: Azure Data Engineer Associate</h3>
+                    <p class="text-gray-600">Microsoft</p>
+                    <a href="https://learn.microsoft.com/api/credentials/share/en-us/Sulaiman-1779/8C147E65EC980BE4?sharingId=2F8D8D7121F7566C" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-700 text-sm font-medium mt-2 inline-block">View Credential</a>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-5 border-l-4 border-teal-500 hover:shadow-lg transition-shadow">
+                    <h3 class="font-semibold text-lg">Top 5 Research Posters</h3>
+                    <p class="text-gray-600">Stat-Fest, SUST — Feb 2023</p>
+                    <a href="https://drive.google.com/drive/folders/1dWIVDmqT5SiE7HwNpoIAdd-rw-YNZkXc?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-700 text-sm font-medium mt-2 inline-block">View Posters</a>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-5 border-l-4 border-teal-500 hover:shadow-lg transition-shadow">
+                    <h3 class="font-semibold text-lg">Research Paper Citation Achievement</h3>
+                    <p class="text-gray-600">70+ Citations on COVID-19 Research</p>
+                    <a href="https://scholar.google.com/citations?user=J0S-lWsAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-700 text-sm font-medium mt-2 inline-block">View Citations</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                </svg>
+                Education
+            </h2>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6">
+                <div class="flex flex-col md:flex-row justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800">BSc. in Statistics</h3>
+                        <div class="text-teal-600 font-medium">Shahjalal University of Science and Technology, Sylhet</div>
+                        <div class="mt-2 text-gray-600">CGPA: 3.55</div>
+                    </div>
+                    <div class="text-gray-500 mt-2 md:mt-0">Feb 2017 - Dec 2021</div>
+                </div>
+                
+                <div class="mt-4">
+                    <h4 class="font-medium text-gray-700">Relevant Courses:</h4>
+                    <div class="mt-2 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-teal-50 text-teal-700 text-sm rounded-full">Econometrics</span>
+                        <span class="px-3 py-1 bg-teal-50 text-teal-700 text-sm rounded-full">Statistical Inference</span>
+                        <span class="px-3 py-1 bg-teal-50 text-teal-700 text-sm rounded-full">Probability</span>
+                        <span class="px-3 py-1 bg-teal-50 text-teal-700 text-sm rounded-full">Time-Series</span>
+                        <span class="px-3 py-1 bg-teal-50 text-teal-700 text-sm rounded-full">Database Management</span>
+                        <span class="px-3 py-1 bg-teal-50 text-teal-700 text-sm rounded-full">Programming</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Get In Touch</h2>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mt-1">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <div>
+                                    <div class="font-medium">Email</div>
+                                    <a href="mailto:contact@sulaimanahmed.com" class="text-teal-600 hover:text-teal-800">contact@sulaimanahmed.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mt-1">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                                <div>
+                                    <div class="font-medium">LinkedIn</div>
+                                    <a href="https://linkedin.com/in/sulaimanahmed" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-800">linkedin.com/in/sulaimanahmed</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 mt-1">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                <div>
+                                    <div class="font-medium">GitHub</div>
+                                    <a href="https://github.com/sulaiman013" target="_blank" rel="noopener noreferrer" class="text-teal-600 hover:text-teal-800">github.com/sulaiman013</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Send a Message</h3>
+                        <form class="space-y-4" id="contact-form">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent" />
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent" />
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors shadow-md">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-teal-800 to-teal-600 text-white py-8 relative z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <div class="font-bold text-xl">Sulaiman Ahmed</div>
+                    <div class="text-teal-200">Data Analytics Engineer</div>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="https://linkedin.com/in/sulaimanahmed" target="_blank" rel="noopener noreferrer" class="hover:text-teal-200 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/sulaiman013" target="_blank" rel="noopener noreferrer" class="hover:text-teal-200 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="mailto:contact@sulaimanahmed.com" class="hover:text-teal-200 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-6 text-center text-teal-200 text-sm">
+                &copy; <span id="current-year"></span> Sulaiman Ahmed. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Simple form handler
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! This is a demo form - in a real implementation, this would send an email.');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Highlight active section in navigation
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if(pageYOffset >= sectionTop - 300) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('border-teal-500');
+                link.classList.add('border-transparent');
+                if(link.getAttribute('href') === `#${current}`) {
+                    link.classList.remove('border-transparent');
+                    link.classList.add('border-teal-500');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
